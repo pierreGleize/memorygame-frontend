@@ -106,31 +106,32 @@ function Home() {
       <div className={styles.header}>
         <h1 className={styles.headerTitle}>Memory Game 🧠</h1>
         <div className={styles.headerDivider} />
-      </div>
+        {/* </div> */}
 
-      <div className={styles.main}>
-        <div className={styles.scoreContainer}>
-          <h2>Timer : {timer}</h2>
-          <input
-            type="text"
-            placeholder="Enter your name"
-            value={pseudo}
-            onChange={(e) => setPseudo(e.target.value)}
-            className={styles.inputPseudo}
-          />{" "}
-          <br />
-          <button
-            onClick={() => setIsRunning(true)}
-            disabled={pseudo.length === 0}
-            style={styleButton}
-            className={styles.startBtn}
-          >
-            Start Game
-          </button>
-          <h3>Best scores :</h3>
-          {scoreToDisplay.length > 0 && scoreToDisplay}
+        <div className={styles.main}>
+          <div className={styles.scoreContainer}>
+            <h2>Timer : {timer}</h2>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              value={pseudo}
+              onChange={(e) => setPseudo(e.target.value)}
+              className={styles.inputPseudo}
+            />{" "}
+            <br />
+            <button
+              onClick={() => setIsRunning(true)}
+              disabled={pseudo.length === 0}
+              style={styleButton}
+              className={styles.startBtn}
+            >
+              Start Game
+            </button>
+            <h3>Best scores :</h3>
+            {scoreToDisplay.length > 0 && scoreToDisplay}
+          </div>
+          <div className={styles.grid}>{cardsToDisplay}</div>
         </div>
-        <div className={styles.grid}>{cardsToDisplay}</div>
       </div>
     </div>
   );

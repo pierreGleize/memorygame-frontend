@@ -27,9 +27,9 @@
 .main {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 70%;
-  margin: 50px;
+ justify-content: space-between;
+ padding: 0 20px;
+
 }
 
 .grid {
@@ -39,10 +39,13 @@
   min-height: 640px;
   min-width: 800px;
   position: relative;
+ margin-right: auto;
 }
 
 .scoreContainer{
   color: white;
+  margin-right: auto;
+  min-width: 200px;
 
 }
 .inputPseudo{
