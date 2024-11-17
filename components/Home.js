@@ -11,6 +11,7 @@ function Home() {
   const [timer, setTimer] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
   const [pseudo, setPseudo] = useState("");
+  const [lastScore, setLastScore] = useState({});
 
   const isGameWin = deckShuffle.every((element) => element.isMatch === true);
 
@@ -52,6 +53,8 @@ function Home() {
       })
         .then((response) => response.json())
         .then((data) => {
+          console.log(data.score.pop());
+          setLastScore(data.score.pop());
           setPseudo("");
           setTimer(0);
           setIsRunning(false);
@@ -119,6 +122,11 @@ function Home() {
               className={styles.inputPseudo}
             />{" "}
             <br />
+            {lastScore.name && (
+              <p>
+                Your last Score : {lastScore.name} : {lastScore.score} secondes
+              </p>
+            )}
             <button
               onClick={() => setIsRunning(true)}
               disabled={pseudo.length === 0}
@@ -127,7 +135,7 @@ function Home() {
             >
               Start Game
             </button>
-            <h3>Best scores :</h3>
+            <h3>Best scores</h3>
             {scoreToDisplay.length > 0 && scoreToDisplay}
           </div>
           <div className={styles.grid}>{cardsToDisplay}</div>

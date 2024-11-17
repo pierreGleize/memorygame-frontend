@@ -4,7 +4,7 @@ import styles from "../styles/Score.module.css";
 const Score = ({ name, score }) => {
   return (
     <p>
-      {name} : {score}
+      {name} : {score} secondes
     </p>
   );
 };
