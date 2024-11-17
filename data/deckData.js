@@ -1,0 +1,88 @@
+export const deck = [
+  {
+    id: 1,
+    name: "billiard ball",
+    image: "/billiardball.svg",
+    isMatch: false,
+  },
+  {
+    id: 2,
+    name: "billiard ball",
+    image: "/billiardball.svg",
+    isMatch: false,
+  },
+  {
+    id: 3,
+    name: "bubble tea",
+    image: "/bubbletea.svg",
+    isMatch: false,
+  },
+  {
+    id: 4,
+    name: "bubble tea",
+    image: "/bubbletea.svg",
+    isMatch: false,
+  },
+  {
+    id: 5,
+    name: "cactus",
+    image: "/cactus.svg",
+    isMatch: false,
+  },
+  {
+    id: 6,
+    name: "cactus",
+    image: "/cactus.svg",
+    isMatch: false,
+  },
+  { id: 7, name: "dog", image: "/dog.svg", isMatch: false },
+  { id: 8, name: "dog", image: "/dog.svg", isMatch: false },
+  {
+    id: 9,
+    name: "laptop",
+    image: "/laptop.svg",
+    isMatch: false,
+  },
+  {
+    id: 10,
+    name: "laptop",
+    image: "/laptop.svg",
+    isMatch: false,
+  },
+  {
+    id: 11,
+    name: "octopus",
+    image: "/octopus.svg",
+    isMatch: false,
+  },
+  {
+    id: 12,
+    name: "octopus",
+    image: "/octopus.svg",
+    isMatch: false,
+  },
+  {
+    id: 13,
+    name: "strawberry",
+    image: "/strawberry.svg",
+    isMatch: false,
+  },
+  {
+    id: 14,
+    name: "strawberry",
+    image: "/strawberry.svg",
+    isMatch: false,
+  },
+  {
+    id: 15,
+    name: "sunglasses",
+    image: "/sunglasses.svg",
+    isMatch: false,
+  },
+  {
+    id: 16,
+    name: "sunglasses",
+    image: "/sunglasses.svg",
+    isMatch: false,
+  },
+];
