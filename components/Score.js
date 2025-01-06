@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "../styles/Score.module.css";
 
-const Score = ({ name, score }) => {
+const Score = ({ name, score, place }) => {
   return (
-    <p>
-      {name} : {score} secondes
-    </p>
+    <div className={styles.scoreContainer}>
+      <span className={styles.place}>{place + 1}.</span>
+      <span className={styles.name}>{name}</span>
+      <span className={styles.score}>{score} secondes</span>
+    </div>
   );
 };
 

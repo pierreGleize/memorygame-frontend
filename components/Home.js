@@ -53,7 +53,6 @@ function Home() {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(data.score.pop());
           setLastScore(data.score.pop());
           setPseudo("");
           setTimer(0);
@@ -101,9 +100,9 @@ function Home() {
   ));
 
   const scoreToDisplay = score.map((element, i) => (
-    <Score key={i} name={element.name} score={element.score} />
+    <Score key={i} name={element.name} score={element.score} place={i} />
   ));
-  const styleButton = pseudo.length === 0 ? { opacity: 0.5 } : {};
+  const styleButton = pseudo.length > 0 ? { opacity: "1" } : {};
   return (
     <div className={styles.home}>
       <div className={styles.header}>
@@ -113,7 +112,7 @@ function Home() {
 
         <div className={styles.main}>
           <div className={styles.scoreContainer}>
-            <h2>Timer : {timer}</h2>
+            <h2 style={{ fontSize: "2rem" }}>{timer}</h2>
             <input
               type="text"
               placeholder="Enter your name"
@@ -123,7 +122,7 @@ function Home() {
             />{" "}
             <br />
             {lastScore.name && (
-              <p>
+              <p style={{ margin: "10px auto" }}>
                 Your last Score : {lastScore.name} : {lastScore.score} secondes
               </p>
             )}

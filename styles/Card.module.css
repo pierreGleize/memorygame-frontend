@@ -53,3 +53,11 @@ card:hover .cardBack {
   background-color: rgb(76, 82, 87);
   border: 2px solid rgb(76, 82, 87);
 }
+
+@media screen and (max-width: 1170px){
+  .card {
+    height: 100px;
+    width: 120px;
+    margin: 15px;
+  }
+}
